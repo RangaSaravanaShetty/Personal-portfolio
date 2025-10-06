@@ -1,0 +1,17 @@
+﻿# Node / Vite
+node_modules/
+dist/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+bun.lockb
+.env
+.env.*
+.DS_Store
+
+# Editor/OS
+.vscode/
+.idea/
+Thumbs.db
