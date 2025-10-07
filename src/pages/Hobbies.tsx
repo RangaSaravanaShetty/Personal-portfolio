@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Camera, Music, Book, Gamepad2, Coffee, Github } from "lucide-react";
+import { Camera, Music, Book, Gamepad2, Coffee, Github, Bike } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 const Hobbies = () => {
   const hobbies = [
     { name: "Photography", icon: <Camera className="w-5 h-5" />, color: "from-blue-500 to-cyan-500" },
-    { name: "Music Production", icon: <Music className="w-5 h-5" />, color: "from-purple-500 to-pink-500" },
+    { name: "Travelling", icon: <Bike className="w-5 h-5" />, color: "from-purple-500 to-pink-500" },
     { name: "Reading", icon: <Book className="w-5 h-5" />, color: "from-green-500 to-emerald-500" },
     { name: "Gaming", icon: <Gamepad2 className="w-5 h-5" />, color: "from-orange-500 to-red-500" },
     { name: "Coffee Brewing", icon: <Coffee className="w-5 h-5" />, color: "from-amber-500 to-yellow-500" },

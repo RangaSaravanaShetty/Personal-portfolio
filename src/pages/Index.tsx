@@ -10,11 +10,11 @@ const Index = () => {
   const titleText = "Engineer | Innovator | Solver";
 
   const socialLinks = [
-    { icon: <Github className="w-6 h-6" />, url: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin className="w-6 h-6" />, url: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <Twitter className="w-6 h-6" />, url: "https://twitter.com", label: "Twitter" },
-    { icon: <Instagram className="w-6 h-6" />, url: "https://instagram.com", label: "Instagram" },
-    { icon: <Mail className="w-6 h-6" />, url: "mailto:contact@example.com", label: "Email" },
+    { icon: <Github className="w-6 h-6" />, url: "https://github.com/RangaSaravanaShetty", label: "GitHub" },
+    { icon: <Linkedin className="w-6 h-6" />, url: "https://www.linkedin.com/in/ranganath-saravana-1390271bb", label: "LinkedIn" },
+    { icon: <Twitter className="w-6 h-6" />, url: "https://twitter.com/Ranga_Saravana_", label: "Twitter" },
+    { icon: <Instagram className="w-6 h-6" />, url: "https://instagram.com/ranga_saravana_shetty", label: "Instagram" },
+    { icon: <Mail className="w-6 h-6" />, url: "mailto:ranganathsaravana@gmail.com", label: "Email" },
   ];
 
   return (
