@@ -8,6 +8,7 @@ import Roadmap from "./pages/Roadmap";
 import Projects from "./pages/Projects";
 import Hobbies from "./pages/Hobbies";
 import NotFound from "./pages/NotFound";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <SpeedInsights />
     </TooltipProvider>
   </QueryClientProvider>
 );
