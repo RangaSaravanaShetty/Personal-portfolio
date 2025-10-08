@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Camera, Music, Book, Gamepad2, Coffee, Github, Bike } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import GeometricBackground from "@/components/ui/geometric-bg";
 
 const Hobbies = () => {
   const hobbies = [
@@ -13,11 +14,12 @@ const Hobbies = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
+      <GeometricBackground />
       <Navigation />
       
-      <main className="pt-24 pb-20 px-6">
-        <div className="container mx-auto">
+      <main className="relative z-10 pt-24 pb-20 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -32,7 +34,7 @@ const Hobbies = () => {
             </p>
           </motion.div>
           
-          <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto mb-20">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-3xl mx-auto mb-20">
             {hobbies.map((hobby, index) => (
               <motion.div
                 key={hobby.name}
@@ -49,7 +51,7 @@ const Hobbies = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <Badge 
-                    className={`px-6 py-3 text-base bg-gradient-to-r ${hobby.color} text-white border-0 cursor-pointer shadow-lg hover:shadow-xl transition-shadow`}
+                    className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base bg-gradient-to-r ${hobby.color} text-white border-0 cursor-pointer shadow-lg hover:shadow-xl transition-shadow`}
                   >
                     <span className="mr-2">{hobby.icon}</span>
                     {hobby.name}

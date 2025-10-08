@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import GeometricBackground from "@/components/ui/geometric-bg";
 
 const Roadmap = () => {
   const roadmapData = [
@@ -64,11 +65,12 @@ const Roadmap = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
+      <GeometricBackground />
       <Navigation />
       
-      <main className="pt-24 pb-20 px-6">
-        <div className="container mx-auto">
+      <main className="relative z-10 pt-24 pb-20 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}

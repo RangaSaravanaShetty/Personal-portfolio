@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Code, Palette, Rocket, BriefcaseMedical, Footprints, Wrench } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import GeometricBackground from "@/components/ui/geometric-bg";
 
 const Projects = () => {
   type Project = {
@@ -131,11 +132,12 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
+      <GeometricBackground />
       <Navigation />
       
-      <main className="pt-24 pb-20 px-6">
-        <div className="container mx-auto">
+      <main className="relative z-10 pt-24 pb-20 px-4 sm:px-6">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -150,7 +152,7 @@ const Projects = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr items-stretch">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
             ))}

@@ -1,9 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/* Removed template constraints to avoid mobile overflow and unintended centering */
 
 .logo {
   height: 6em;

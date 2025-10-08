@@ -57,4 +57,16 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+
+  /* Prevent horizontal overflow on mobile */
+  html, body, #root {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Ensure media scales within containers */
+  img, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+  }
 }

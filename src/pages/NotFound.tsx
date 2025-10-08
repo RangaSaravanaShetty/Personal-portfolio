@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import GeometricBackground from "@/components/ui/geometric-bg";
 
 const NotFound = () => {
   const location = useLocation();
@@ -9,11 +10,12 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
+    <div className="flex min-h-screen items-center justify-center bg-background text-foreground px-4 relative overflow-x-hidden">
+      <GeometricBackground />
+      <div className="relative z-10 text-center">
+        <h1 className="mb-3 text-5xl sm:text-6xl font-bold text-primary">404</h1>
+        <p className="mb-6 text-base sm:text-lg text-muted-foreground">Oops! Page not found</p>
+        <a href="/" className="inline-block rounded-md bg-primary px-5 py-2 text-primary-foreground hover:bg-primary/90 transition-colors">
           Return to Home
         </a>
       </div>

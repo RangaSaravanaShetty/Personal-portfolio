@@ -5,6 +5,7 @@ import { Github, Linkedin, Twitter, Mail, Instagram, Phone, FileText } from "luc
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import profileImage from "@/assets/profile-avatar.jpg";
+import GeometricBackground from "@/components/ui/geometric-bg";
 
 const Index = () => {
   const titleText = "Engineer | Innovator | Solver";
@@ -17,12 +18,15 @@ const Index = () => {
     { icon: <Mail className="w-6 h-6" />, url: "mailto:ranganathsaravana@gmail.com", label: "Email" },
   ];
 
+  const resumeUrl = (import.meta as any).env?.VITE_RESUME_URL || "/resume.pdf";
+
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
+      <GeometricBackground />
       <Navigation />
       
-      <main className="min-h-screen flex items-center justify-center px-6">
-        <div className="container mx-auto text-center max-w-4xl">
+      <main className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 pt-24 pb-10">
+        <div className="container mx-auto text-center max-w-full">
           {/* Profile Photo */}
           <motion.div
             className="flex justify-center mb-8"
@@ -47,7 +51,7 @@ const Index = () => {
           </motion.h2>
 
           {/* Title */}
-          <motion.h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+          <motion.h1 className="whitespace-nowrap text-[clamp(18px,5.2vw,48px)] sm:text-4xl md:text-5xl leading-tight font-bold mb-6 text-primary w-fit mx-auto max-w-full overflow-hidden">
             {titleText.split("").map((char, index) => (
               <motion.span
                 key={index}
@@ -68,17 +72,17 @@ const Index = () => {
 
           {/* Contact Details */}
           <motion.div
-            className="flex flex-col gap-2 mb-8 text-muted-foreground"
+            className="flex flex-col gap-2 mb-8 text-muted-foreground text-sm sm:text-base"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
           >
             <a 
               href="mailto:john.doe@example.com" 
-              className="flex items-center justify-center gap-2 hover:text-primary transition-colors"
+              className="flex items-center justify-center gap-2 hover:text-primary transition-colors break-words"
             >
               <Mail className="w-4 h-4" />
-              <span>ranganathsaravana@gmail.com</span>
+              <span className="break-all">ranganathsaravana@gmail.com</span>
             </a>
             <a 
               href="tel:+1234567890" 
@@ -91,7 +95,7 @@ const Index = () => {
               href="https://www.linkedin.com/in/ranganath-saravana-1390271bb" 
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 hover:text-primary transition-colors"
+              className="flex items-center justify-center gap-2 hover:text-primary transition-colors break-words"
             >
               <Linkedin className="w-4 h-4" />
               <span>linkedin.com/in/RanganathSaravana</span>
@@ -99,7 +103,7 @@ const Index = () => {
           </motion.div>
           
           <motion.p 
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
+            className="text-base sm:text-lg md:text-xl leading-relaxed text-muted-foreground max-w-[680px] mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.5 }}
@@ -131,7 +135,7 @@ const Index = () => {
                 My Journey
               </Button>
             </Link>
-            <a href="/resume.pdf" download>
+            <a href={resumeUrl} download>
               <Button 
                 size="lg"
                 variant="outline"
