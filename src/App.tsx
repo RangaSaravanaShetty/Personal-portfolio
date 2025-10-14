@@ -27,7 +27,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      <SpeedInsights />
+      {import.meta.env.PROD && <SpeedInsights />}
     </TooltipProvider>
   </QueryClientProvider>
 );
