@@ -36,7 +36,7 @@ const Index = () => {
           >
             <Avatar className="w-32 h-32 border-4 border-primary/30 shadow-lg shadow-primary/20">
               <AvatarImage src={profileImage} alt="Profile" />
-              <AvatarFallback>JD</AvatarFallback>
+              <AvatarFallback>RS</AvatarFallback>
             </Avatar>
           </motion.div>
 
