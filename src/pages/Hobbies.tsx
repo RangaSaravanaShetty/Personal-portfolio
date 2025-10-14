@@ -68,7 +68,7 @@ const Hobbies = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="mb-4">© 2025 Portfolio. Built with passion and precision.</p>
+            <p className="mb-4">© 2025 Ranganath Saravana. Built with passion and precision.</p>
             <div className="flex justify-center gap-6">
               <motion.a 
                 href="https://github.com/RangaSaravanaShetty" 
