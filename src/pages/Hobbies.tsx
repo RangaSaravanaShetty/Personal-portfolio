@@ -30,7 +30,7 @@ const Hobbies = () => {
               Hobbies & <span className="text-primary">Interests</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              When I'm not coding, you'll find me exploring these passions
+              Off the job site or away from the desk, you’ll often find me pursuing these passions.
             </p>
           </motion.div>
           
@@ -71,7 +71,7 @@ const Hobbies = () => {
             <p className="mb-4">© 2025 Portfolio. Built with passion and precision.</p>
             <div className="flex justify-center gap-6">
               <motion.a 
-                href="https://github.com" 
+                href="https://github.com/RangaSaravanaShetty" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"

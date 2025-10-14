@@ -78,14 +78,14 @@ const Index = () => {
             transition={{ delay: 1, duration: 0.5 }}
           >
             <a 
-              href="mailto:john.doe@example.com" 
+              href="mailto:ranganathsaravana@gmail.com" 
               className="flex items-center justify-center gap-2 hover:text-primary transition-colors break-words"
             >
               <Mail className="w-4 h-4" />
               <span className="break-all">ranganathsaravana@gmail.com</span>
             </a>
             <a 
-              href="tel:+1234567890" 
+              href="tel:+917019922146" 
               className="flex items-center justify-center gap-2 hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
