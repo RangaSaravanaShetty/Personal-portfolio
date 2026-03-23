@@ -8,6 +8,12 @@ import GeometricBackground from "@/components/ui/geometric-bg";
 const Roadmap = () => {
   const roadmapData = [
     { 
+      year: "2025-Present", 
+      title: "Hardware Design and Documentation - Intern", 
+      company: "Phase Power Protection PVT LTD", 
+      description: "Supported hardware design by creating schematics, assembly documentation, and BOMs for power system protective equipment."
+    },
+    { 
       year: "2023-2026", 
       title: "Bachelor's in Electrical and Electronics Engineering", 
       company: "MVJ College of Engineering", 
